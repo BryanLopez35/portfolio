@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Bryan Lopez | Desarrollador Web y Software en Tijuana",
   description:
     "Experto en desarrollo web y software en Tijuana. Diseño sitios web y apps para empresas. Contáctame para soluciones digitales a la medida.",
+  keywords: ["desarrollador web", "desarrollador software", "tijuana"],
 };
 
 export default function RootLayout({

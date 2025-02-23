@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Laptop, Github, Globe } from "lucide-react";
 import { SectionHeading } from "./section-heading";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const allProjects = [
@@ -149,7 +150,12 @@ export function ProjectsSection() {
               key={category}
               variant={selectedCategory === category ? "default" : "outline"}
               onClick={() => setSelectedCategory(category)}
-              className="flex-1 sm:flex-none"
+              className={cn(
+                "flex-1 sm:flex-none",
+                selectedCategory === category
+                  ? "text-white"
+                  : "text-black dark:text-white"
+              )}
             >
               {category}
             </Button>
@@ -247,7 +253,7 @@ export function ProjectsSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary/20 bg-background/50 backdrop-blur-sm"
+              className="border-primary/20 bg-background/50 backdrop-blur-sm text-black dark:text-white"
               onClick={loadMoreProjects}
             >
               <Github className="h-5 w-5 mr-2" />

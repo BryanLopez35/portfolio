@@ -5,28 +5,23 @@ import { Button } from "@/components/ui/button";
 import {
   Github,
   Linkedin,
-  Twitter,
   ChevronDown,
   ExternalLink,
-  DownloadCloud
+  DownloadCloud,
 } from "lucide-react";
 import { NeuralPattern } from "@/components/neural-pattern";
+import Image from "next/image";
 
 const socialLinks = [
   {
     icon: Github,
-    href: "#",
+    href: "https://github.com/BryanLopez35/",
     label: "GitHub",
   },
   {
     icon: Linkedin,
-    href: "#",
+    href: "https://www.linkedin.com/in/bryan-lopez-hdz/",
     label: "LinkedIn",
-  },
-  {
-    icon: Twitter,
-    href: "#",
-    label: "Twitter",
   },
 ];
 
@@ -126,7 +121,7 @@ export function HeroSection() {
 
               <div>
                 <motion.h1
-                  className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-4"
+                  className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-4 text-black dark:text-white"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
@@ -140,9 +135,8 @@ export function HeroSection() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  Creación de experiencias digitales con tecnologías modernas y
-                  soluciones creativas. Convertir ideas en elegantes,
-                  funcionales realidades.
+                  Creando hermosas experiencias digitales que combinan
+                  creatividad y tecnología para generar soluciones innovadoras.
                 </motion.p>
               </div>
 
@@ -154,7 +148,7 @@ export function HeroSection() {
               >
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-primary via-accent to-secondary text-white hover:opacity-90 transition-opacity"
+                  className="bg-gradient-to-r from-primary via-accent to-secondary text-black dark:text-white hover:opacity-90 transition-opacity"
                   onClick={() =>
                     document
                       .getElementById("contact")
@@ -164,7 +158,11 @@ export function HeroSection() {
                   Contáctame
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
-                <Button size="lg" variant="outline" className="glass-effect">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="glass-effect text-black dark:text-white"
+                >
                   <a href="documents/CV_Bryan_Lopez.pdf" download>
                     Descargar CV
                   </a>
@@ -193,7 +191,7 @@ export function HeroSection() {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="relative glass-effect"
+                        className="relative glass-effect text-black dark:text-white"
                       >
                         <Icon className="h-5 w-5" />
                       </Button>
@@ -261,12 +259,15 @@ export function HeroSection() {
                       {/* Animated gradient border */}
                       <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary opacity-30 animate-spin-slow" />
 
-                      {/* Image container*/}
+                      {/* Image container */}
                       <div className="absolute inset-1 rounded-lg overflow-hidden bg-background/80 backdrop-blur-sm">
-                        <img
-                          src="/videos/EmojiMovie761983529-unscreen.gif"
-                          className="w-full h-full object-cover"
-                          alt="Animated GIF"
+                        <Image
+                          src="/images/bryan_lopez_desarrollador_tijuana.gif"
+                          className="w-full h-full object-contain"
+                          alt="Bryan Lopez - Desarrollador Tijuana"
+                          width={400}
+                          height={500}
+                          unoptimized
                         />
                       </div>
                     </div>
