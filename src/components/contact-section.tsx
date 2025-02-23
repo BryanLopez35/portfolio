@@ -166,8 +166,7 @@ export function ContactSection() {
                   Disponibilidad Actual
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Actualmente estoy disponible para trabajos independientes y
-                  puestos de tiempo completo. Si tienes un proyecto en mente, ¡estoy aquí para ayudarte!
+                  Actualmente estoy disponible para trabajos independientes. Si tienes un proyecto en mente, ¡estoy aquí para ayudarte!
                 </p>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
