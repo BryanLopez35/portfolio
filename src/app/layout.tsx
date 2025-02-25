@@ -12,8 +12,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
-
 export const metadata: Metadata = {
   title: "Bryan Lopez | Desarrollador Web y Software en Tijuana",
   description:
@@ -41,12 +39,36 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico" }, // Favicon por defecto
-      { url: "/favicon-dark.ico", media: "(prefers-color-scheme: dark)" }, // Favicon para modo oscuro
+      { url: "/favicon.ico" },
+      { url: "/favicon-dark.ico", media: "(prefers-color-scheme: dark)" },
     ],
   },
   other: {
     "theme-color": "rgb(227, 230, 245)", // Color inicial (modo claro)
+  },
+  // Open Graph Meta Tags
+  openGraph: {
+    title: "Bryan Lopez | Desarrollador Web y Software en Tijuana",
+    description:
+      "Experto en desarrollo web y software en Tijuana. Diseño sitios web y apps para empresas. Contáctame para soluciones digitales a la medida.",
+    url: "https://bryancode.dev/", // URL canónica
+    siteName: "BryanCode",
+    images: [
+      {
+        url: "https://bryancode.dev/path/to/your-image.jpg", // Cambia esto con una imagen representativa
+        width: 1200,
+        height: 630,
+        alt: "Bryan Lopez | Desarrollador Web y Software",
+      },
+    ],
+  },
+  // Twitter Cards
+  twitter: {
+    card: "summary_large_image", // Usa una imagen grande para la vista previa
+    title: "Bryan Lopez | Desarrollador Web y Software en Tijuana",
+    description:
+      "Experto en desarrollo web y software en Tijuana. Diseño sitios web y apps para empresas. Contáctame para soluciones digitales a la medida.",
+    images: "/favicon-96x96.png", // Cambia esto con la URL de tu imagen
   },
 };
 
