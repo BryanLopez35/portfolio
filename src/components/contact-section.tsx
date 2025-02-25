@@ -1,15 +1,14 @@
 "use client";
 
 import type React from "react";
-
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2, CheckCircle } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
-import { useState } from "react";
 
 const contactInfo = [
   {
@@ -34,13 +33,82 @@ const contactInfo = [
 
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    surname: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    if (/^\d*$/.test(value)) {
+      setFormData((prevData) => ({ ...prevData, [name]: value }));
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
+
+    // Validaciones
+    const phoneRegex = /^\+?[1-9]\d{1,14}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!phoneRegex.test(formData.phone)) {
+      alert("Por favor, ingresa un número de teléfono válido.");
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (!emailRegex.test(formData.email)) {
+      alert("Por favor, ingresa un correo electrónico válido.");
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({
+          name: "",
+          surname: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        const errorData = await response.json();
+        alert(`Hubo un problema al enviar el mensaje: ${errorData.error}`);
+      }
+    } catch (error) {
+      if (error instanceof Error) {
+        alert(`Hubo un problema al enviar el mensaje: ${error.message}`);
+      } else {
+        alert("Hubo un problema desconocido al enviar el mensaje.");
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -58,58 +126,100 @@ export function ContactSection() {
           >
             <Card className="overflow-hidden backdrop-blur-sm bg-background/50 border-primary/10">
               <CardContent className="p-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-4">
+                {isSubmitted ? (
+                  <div className="flex flex-col items-center space-y-4">
+                    <CheckCircle className="h-12 w-12 text-green-500" />
+                    <h2 className="text-xl font-semibold">Mensaje enviado</h2>
+                    <p className="text-center">
+                      ¡Gracias por tu mensaje! Me pondré en contacto contigo lo
+                      antes posible.
+                    </p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Input
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          placeholder="Nombre"
+                          className="bg-background/50 border-primary/10"
+                          required
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Input
+                          name="surname"
+                          value={formData.surname}
+                          onChange={handleChange}
+                          placeholder="Apellido"
+                          className="bg-background/50 border-primary/10"
+                          required
+                        />
+                      </div>
+                    </div>
                     <div className="space-y-2">
                       <Input
-                        placeholder="Nombre"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="Email"
                         className="bg-background/50 border-primary/10"
+                        required
                       />
                     </div>
                     <div className="space-y-2">
                       <Input
-                        placeholder="Apellido"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handlePhoneChange}
+                        placeholder="Número de celular"
                         className="bg-background/50 border-primary/10"
+                        required
                       />
                     </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Input
-                      type="email"
-                      placeholder="Email"
-                      className="bg-background/50 border-primary/10"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Input
-                      placeholder="Asunto"
-                      className="bg-background/50 border-primary/10"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Textarea
-                      placeholder="Mensaje"
-                      className="min-h-[150px] bg-background/50 border-primary/10"
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                        Enviando...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="h-4 w-4 mr-2" />
-                        Enviar mensaje
-                      </>
-                    )}
-                  </Button>
-                </form>
+                    <div className="space-y-2">
+                      <Input
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        placeholder="Asunto"
+                        className="bg-background/50 border-primary/10"
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        placeholder="Mensaje"
+                        className="min-h-[150px] bg-background/50 border-primary/10"
+                        required
+                      />
+                    </div>
+                    <Button
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                          Enviando...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="h-4 w-4 mr-2" />
+                          Enviar mensaje
+                        </>
+                      )}
+                    </Button>
+                  </form>
+                )}
               </CardContent>
             </Card>
           </motion.div>
@@ -166,7 +276,8 @@ export function ContactSection() {
                   Disponibilidad Actual
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Actualmente estoy disponible para trabajos independientes. Si tienes un proyecto en mente, ¡estoy aquí para ayudarte!
+                  Actualmente estoy disponible para trabajos independientes. Si
+                  tienes un proyecto en mente, ¡estoy aquí para ayudarte!
                 </p>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
