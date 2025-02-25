@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-dark.ico", media: "(prefers-color-scheme: dark)" },
+      { url: "public/favicon.ico" },
+      { url: "public/favicon-dark.ico", media: "(prefers-color-scheme: dark)" },
     ],
   },
   other: {
