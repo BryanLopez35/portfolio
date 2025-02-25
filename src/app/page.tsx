@@ -51,6 +51,17 @@ export default function Portfolio() {
     }
   };
 
+  useEffect(() => {
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute(
+        "content",
+        isDark ? "rgb(9, 10, 15)" : "rgb(227, 230, 245)"
+      );
+    }
+  }, [isDark]);
+  
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-background to-background/50 dark:from-background dark:to-background/80 cursor-none">
       <CustomCursor />
