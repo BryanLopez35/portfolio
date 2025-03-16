@@ -13,7 +13,7 @@ import Image from "next/image";
 const allProjects = [
   {
     title: "APP Control de Gastos",
-    description: "",
+    description: "Aplicación móvil para llevar el control de gastos empresariales",
     image: "/images/appgastos.webp",
     tags: ["React Native", "Expo", "TypeScript", "Firebase"],
     category: "Desarrollo Móvil",
@@ -28,7 +28,7 @@ const allProjects = [
   },
   {
     title: "CRM CDK Group",
-    description: "",
+    description: "Sistema de gestion y análisis de datos",
     image: "/images/cdk.webp",
     tags: ["CodeIgniter", "PHP", "JavaScript", "MySQL", "CSS", "HTML"],
     category: "Software a la Medida",
@@ -43,7 +43,7 @@ const allProjects = [
   },
   {
     title: "Dental Nakeji",
-    description: "",
+    description: "Clínica dental en Tijuana",
     image: "/images/nakeji.webp",
     tags: ["Wordpress", "PHP", "JavaScript", "MySQL", "CSS", "HTML"],
     category: "Desarrollo Web",
@@ -58,7 +58,7 @@ const allProjects = [
   },
   {
     title: "CRM GSC Terra",
-    description: "",
+    description: "Sistema de gestion empresarial, con modulos de inventario, ventas, compras, contabilidad, clientes, proveedores, etc.",
     image: "/images/gscterra.webp",
     tags: ["Laravel", "PHP", "JavaScript", "MySQL", "CSS", "HTML"],
     category: "Software a la Medida",
@@ -73,7 +73,7 @@ const allProjects = [
   },
   {
     title: "New Life Hospital",
-    description: "",
+    description: "Hospital de especialidades bariátricas",
     image: "/images/newlife.webp",
     tags: ["Wordpress", "PHP", "JavaScript", "MySQL", "CSS", "HTML"],
     category: "Desarrollo Web",
@@ -88,7 +88,7 @@ const allProjects = [
   },
   {
     title: "Luminous Dental Las Vegas",
-    description: "",
+    description: "Clínica dental en Las Vegas",
     image: "/images/luminous.webp",
     tags: ["Wordpress", "PHP", "JavaScript", "MySQL", "CSS", "HTML"],
     category: "Desarrollo Web",
@@ -103,12 +103,27 @@ const allProjects = [
   },
   {
     title: "JK Medios",
-    description: "",
+    description: "Empresa de publicidad en medios exteriores",
     image: "/images/jkmedios.webp",
     tags: ["Wordpress", "PHP", "JavaScript", "MySQL", "CSS", "HTML"],
     category: "Desarrollo Web",
     links: {
       demo: "https://jkmedios.com/",
+      code: "",
+    },
+    stats: [
+      { label: "", value: "" },
+      { label: "", value: "" },
+    ],
+  },
+  {
+    title: "Dental Assessors Group",
+    description: "Grupo de especialistas en odontología",
+    image: "/images/dentalassessorstj.webp",
+    tags: ["Wordpress", "PHP", "JavaScript", "MySQL", "CSS", "HTML"],
+    category: "Desarrollo Web",
+    links: {
+      demo: "https://dentalassessorstj.com/",
       code: "",
     },
     stats: [
