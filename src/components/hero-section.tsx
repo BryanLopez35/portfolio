@@ -163,10 +163,10 @@ export function HeroSection() {
                   variant="outline"
                   className="glass-effect text-black dark:text-white"
                 >
-                  <a href="documents/CV_Bryan_Lopez.pdf" download>
-                    Descargar CV
-                  </a>
+                  <a href="https://rxresu.me/bryanlopez35/bryan-lopez" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                  Descargar CV
                   <DownloadCloud className="ml-2 h-4 w-4" />
+                  </a>
                 </Button>
               </motion.div>
 
