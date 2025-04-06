@@ -116,7 +116,7 @@ const allProjects = [
       { label: "", value: "" },
     ],
   },
-  {
+  /*{
     title: "Dental Assessors Group",
     description: "Grupo de especialistas en odontología",
     image: "/images/dentalassessorstj.webp",
@@ -130,7 +130,7 @@ const allProjects = [
       { label: "", value: "" },
       { label: "", value: "" },
     ],
-  },
+  },*/
 ];
 
 const categories = [
