@@ -146,22 +146,6 @@ const allProjects = [
       { label: "", value: "" },
     ],
   },
- 
-  /*{
-    title: "Dental Assessors Group",
-    description: "Grupo de especialistas en odontología",
-    image: "/images/dentalassessorstj.webp",
-    tags: ["Wordpress", "PHP", "JavaScript", "MySQL", "CSS", "HTML"],
-    category: "Desarrollo Web",
-    links: {
-      demo: "https://dentalassessorstj.com/",
-      code: "",
-    },
-    stats: [
-      { label: "", value: "" },
-      { label: "", value: "" },
-    ],
-  },*/
 ];
 
 const categories = [
