@@ -12,6 +12,21 @@ import Image from "next/image";
 
 const allProjects = [
   {
+    title: "Optima Seminuevos",
+    description: "Sitio web para Optima Seminuevos, división de Grupo Optima, empresa automotriz representante de KIA y HONDA en Baja California. Incluye integración con API REST para consulta de inventario y cotizaciones, búsqueda inteligente, soporte para temas claro/oscuro y un bot con inteligencia artificial para atención al usuario.", 
+    image: "/images/optima_seminuevos.webp",
+    tags: ["Next Js", "TypeScript", "Tailwind", "API REST", "CSS", "HTML", "Responsive", "SEO", "Dark Mode"],
+    category: "Desarrollo Web",
+    links: {
+      demo: "https://optima-seminuevos-v2.vercel.app/",
+      code: "",
+    },
+    stats: [
+      { label: "", value: "" },
+      { label: "", value: "" },
+    ],
+  },
+  {
     title: "APP Control de Gastos",
     description: "Aplicación móvil para llevar el control de gastos empresariales",
     image: "/images/appgastos.webp",
@@ -49,6 +64,21 @@ const allProjects = [
     category: "Desarrollo Web",
     links: {
       demo: "http://nakejidental.com/",
+      code: "",
+    },
+    stats: [
+      { label: "", value: "" },
+      { label: "", value: "" },
+    ],
+  },
+  {
+    title: "JK Medios (Migración)",
+    description: "Empresa de publicidad en medios exteriores. Desarrollo actual en una nueva versión con Next.js para mejorar rendimiento, escalabilidad y experiencia de usuario.",
+    image: "/images/JK MEDIOS.webp",
+    tags: ["Next Js", "TypeScript", "Tailwind", "CSS", "HTML", "Responsive", "SEO", "Dark Mode"],
+    category: "Desarrollo Web",
+    links: {
+      demo: "https://jkmedios-v2.vercel.app/",
       code: "",
     },
     stats: [
@@ -116,36 +146,7 @@ const allProjects = [
       { label: "", value: "" },
     ],
   },
-  {
-    title: "Optima Seminuevos",
-    description: "Sitio web para Optima Seminuevos, división de Grupo Optima, empresa automotriz representante de KIA y HONDA en Baja California. Incluye integración con API REST para consulta de inventario y cotizaciones, búsqueda inteligente, soporte para temas claro/oscuro y un bot con inteligencia artificial para atención al usuario.", 
-    image: "/images/optima seminuevos.webp",
-    tags: ["Next Js", "TypeScript", "Tailwind", "API REST", "CSS", "HTML", "Responsive", "SEO", "Dark Mode"],
-    category: "Desarrollo Web",
-    links: {
-      demo: "https://optima-seminuevos-v2.vercel.app/",
-      code: "",
-    },
-    stats: [
-      { label: "", value: "" },
-      { label: "", value: "" },
-    ],
-  },
-  {
-    title: "JK Medios (Migración)",
-    description: "Empresa de publicidad en medios exteriores. Desarrollo actual en una nueva versión con Next.js para mejorar rendimiento, escalabilidad y experiencia de usuario.",
-    image: "/images/JK MEDIOS.webp",
-    tags: ["Next Js", "TypeScript", "Tailwind", "CSS", "HTML", "Responsive", "SEO", "Dark Mode"],
-    category: "Desarrollo Web",
-    links: {
-      demo: "https://jkmedios-v2.vercel.app/",
-      code: "",
-    },
-    stats: [
-      { label: "", value: "" },
-      { label: "", value: "" },
-    ],
-  },
+ 
   /*{
     title: "Dental Assessors Group",
     description: "Grupo de especialistas en odontología",
