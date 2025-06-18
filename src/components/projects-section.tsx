@@ -13,9 +13,20 @@ import Image from "next/image";
 const allProjects = [
   {
     title: "Optima Seminuevos",
-    description: "Sitio web para Optima Seminuevos, división de Grupo Optima, empresa automotriz representante de KIA y HONDA en Baja California. Incluye integración con API REST para consulta de inventario y cotizaciones, búsqueda inteligente, soporte para temas claro/oscuro y un bot con inteligencia artificial para atención al usuario.", 
+    description:
+      "Sitio web para Optima Seminuevos, división de Grupo Optima, empresa automotriz representante de KIA y HONDA en Baja California. Incluye integración con API REST para consulta de inventario y cotizaciones, búsqueda inteligente, soporte para temas claro/oscuro y un bot con inteligencia artificial para atención al usuario.",
     image: "/images/optima_seminuevos.webp",
-    tags: ["Next Js", "TypeScript", "Tailwind", "API REST", "CSS", "HTML", "Responsive", "SEO", "Dark Mode"],
+    tags: [
+      "Next Js",
+      "TypeScript",
+      "Tailwind",
+      "API REST",
+      "CSS",
+      "HTML",
+      "Responsive",
+      "SEO",
+      "Dark Mode",
+    ],
     category: "Desarrollo Web",
     links: {
       demo: "https://optima-seminuevos-v2.vercel.app/",
@@ -28,7 +39,8 @@ const allProjects = [
   },
   {
     title: "APP Control de Gastos",
-    description: "Aplicación móvil para llevar el control de gastos empresariales",
+    description:
+      "Aplicación móvil para llevar el control de gastos empresariales",
     image: "/images/appgastos.webp",
     tags: ["React Native", "Expo", "TypeScript", "Firebase"],
     category: "Desarrollo Móvil",
@@ -72,10 +84,68 @@ const allProjects = [
     ],
   },
   {
+    title: "Luminous Dental Las Vegas | Landing Page Dental Implantants",
+    description: "Clínica dental en Las Vegas",
+    image: "/images/luminous-dental-implants.webp",
+    tags: [
+      "Next Js",
+      "TypeScript",
+      "Tailwind",
+      "CSS",
+      "HTML",
+      "Responsive",
+      "SEO",
+      "Generación de Leads",
+    ],
+    category: "Desarrollo Web",
+    links: {
+      demo: "https://dentalimplants.luminousdentallv.com/",
+      code: "",
+    },
+    stats: [
+      { label: "", value: "" },
+      { label: "", value: "" },
+    ],
+  },
+  {
+    title: "Luminous Dental Las Vegas | Landing Page Veneers",
+    description: "Clínica dental en Las Vegas",
+    image: "/images/luminous-dental-veneers.webp",
+    tags: [
+      "Next Js",
+      "TypeScript",
+      "Tailwind",
+      "CSS",
+      "HTML",
+      "Responsive",
+      "SEO",
+      "Generación de Leads",
+    ],
+    category: "Desarrollo Web",
+    links: {
+      demo: "https://veneers.luminousdentallv.com/",
+      code: "",
+    },
+    stats: [
+      { label: "", value: "" },
+      { label: "", value: "" },
+    ],
+  },
+  {
     title: "JK Medios (Migración)",
-    description: "Empresa de publicidad en medios exteriores. Desarrollo actual en una nueva versión con Next.js para mejorar rendimiento, escalabilidad y experiencia de usuario.",
+    description:
+      "Empresa de publicidad en medios exteriores. Desarrollo actual en una nueva versión con Next.js para mejorar rendimiento, escalabilidad y experiencia de usuario.",
     image: "/images/JK MEDIOS.webp",
-    tags: ["Next Js", "TypeScript", "Tailwind", "CSS", "HTML", "Responsive", "SEO", "Dark Mode"],
+    tags: [
+      "Next Js",
+      "TypeScript",
+      "Tailwind",
+      "CSS",
+      "HTML",
+      "Responsive",
+      "SEO",
+      "Dark Mode",
+    ],
     category: "Desarrollo Web",
     links: {
       demo: "https://jkmedios-v2.vercel.app/",
@@ -88,7 +158,8 @@ const allProjects = [
   },
   {
     title: "CRM GSC Terra",
-    description: "Sistema de gestion empresarial, con modulos de inventario, ventas, compras, contabilidad, clientes, proveedores, etc.",
+    description:
+      "Sistema de gestion empresarial, con modulos de inventario, ventas, compras, contabilidad, clientes, proveedores, etc.",
     image: "/images/gscterra.webp",
     tags: ["Laravel", "PHP", "JavaScript", "MySQL", "CSS", "HTML"],
     category: "Software a la Medida",

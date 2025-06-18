@@ -1,0 +1,27 @@
+{
+  "name": "Bryan Lopez | Desarrollador Web y Software en Tijuana",
+  "short_name": "BryanCode",
+  "description": "Portafolio de Bryan Lopez, desarrollador web y software en Tijuana.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#e3e6f5",
+  "theme_color": "#e3e6f5",
+  "icons": [
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "es"
+}
