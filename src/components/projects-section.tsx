@@ -148,7 +148,7 @@ const allProjects = [
     ],
     category: "Desarrollo Web",
     links: {
-      demo: "https://jkmedios-v2.vercel.app/",
+      demo: "https://jkmedios.com/",
       code: "",
     },
     stats: [
