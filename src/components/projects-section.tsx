@@ -29,12 +29,13 @@ const allProjects = [
     ],
     category: "Desarrollo Web",
     links: {
-      demo: "https://optima-seminuevos-v2.vercel.app/",
+      demo: "https://optimaseminuevos.com/",
       code: "",
     },
     stats: [
-      { label: "", value: "" },
-      { label: "", value: "" },
+      { label: "Tiempo de interacción medio", value: "+217 %" },
+      { label: "Organic Search:", value: "+5.4 %" },
+      { label: "Organic Social:", value: "+14.3 %" },
     ],
   },
   {
@@ -44,6 +45,21 @@ const allProjects = [
     image: "/images/appgastos.webp",
     tags: ["React Native", "Expo", "TypeScript", "Firebase"],
     category: "Desarrollo Móvil",
+    links: {
+      demo: "",
+      code: "",
+    },
+    stats: [
+      { label: "", value: "" },
+      { label: "", value: "" },
+    ],
+  },
+    {
+    title: "Bustamante Realty Group",
+    description: "Sistema de gestion y análisis de datos",
+    image: "/images/BRG.webp",
+    tags: ["CodeIgniter", "PHP", "JavaScript", "MySQL", "CSS", "HTML"],
+    category: "Software a la Medida",
     links: {
       demo: "",
       code: "",
