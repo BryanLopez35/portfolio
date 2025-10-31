@@ -15,7 +15,7 @@ const allProjects = [
     title: "Optima Seminuevos",
     description:
       "Sitio web para Optima Seminuevos, división de Grupo Optima, empresa automotriz representante de KIA y HONDA en Baja California. Incluye integración con API REST para consulta de inventario y cotizaciones, búsqueda inteligente, soporte para temas claro/oscuro y un bot con inteligencia artificial para atención al usuario.",
-    image: "/images/optima_seminuevos.webp",
+    image: "/images/Optima-Seminuevos.webp",
     tags: [
       "Next Js",
       "TypeScript",
