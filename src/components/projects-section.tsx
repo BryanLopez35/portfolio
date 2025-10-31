@@ -34,8 +34,8 @@ const allProjects = [
     },
     stats: [
       { label: "Tiempo de interacción medio", value: "+217 %" },
-      { label: "Organic Search:", value: "+5.4 %" },
-      { label: "Organic Social:", value: "+14.3 %" },
+      { label: "Organic Search", value: "+5.4 %" },
+      { label: "Organic Social", value: "+14.3 %" },
     ],
   },
   {
